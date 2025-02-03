@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 
 def addlabels(x, y):
     for i in range(len(x)):
-        plt.text(i, y[i], round(1000/y[i], 3), ha='center', va='center')
+        plt.text(i, y[i] + 4, round(y[i]/1000, 3), ha='center', va='center')
 
 
 chisla = ['1', '2', '3', '4', '5', '6', 'maximum']
