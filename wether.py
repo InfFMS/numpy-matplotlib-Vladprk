@@ -37,20 +37,19 @@ print(k_max_t)
 print(l_max)
 
 x = [i for i in range(1, 366)]
-fig1, ax1 = plt.subplots()
-ax1.plot(x, data)
+fig1, ax1 = plt.subplots(1, 2)
+ax1[0].plot(x, data)
 plt.xlabel('Дни')
 plt.ylabel('Температура')
 for i in range(365):
     if data[i] <= 0:
         tochka = plt.Circle((i + 1, data[i]), 1, facecolor='blue')
-        ax1.add_patch(tochka)
+        ax1[0].add_patch(tochka)
     else:
         tochka = plt.Circle((i + 1, data[i]), 1, facecolor='red')
-        ax1.add_patch(tochka)
+        ax1[0].add_patch(tochka)
 
-fig, ax = plt.subplots()
-im = ax.bar(categories, values, color='#215111')
+im = ax1[1].bar(categories, values, color='#215111')
 
 plt.show()
 
